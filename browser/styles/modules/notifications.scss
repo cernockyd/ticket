@@ -1,0 +1,104 @@
+.notifications-headline {
+  position: relative;
+  text-align: center;
+  padding-bottom: 6px;
+  margin-bottom: 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.navbar-light .navbar-nav {
+
+  .dropdown-notifications {
+    padding-bottom: 0;
+    width: 300px;
+    right: -6px;
+    padding-bottom: 0;
+  }
+
+  .list-notifications {
+    list-style: none;
+    padding-left: 0;
+    overflow-y: scroll;
+    max-height: 250px;
+
+    .nav-item {
+      padding: 0;
+      display: block;
+    }
+
+    .nav-link {
+      color: #000;
+      cursor: pointer;
+      word-break: break-word;
+      width: 100%;
+      display: block;
+      padding: 11px 10px 10px 8px;
+      font-size: 14px;
+      line-height: 18px;
+      white-space: normal;
+      border-bottom: 1px solid #efeef1;
+      b {
+        color: #000;
+      }
+      &:hover {
+        background: #f7f7f9;
+      }
+    }
+  }
+}
+
+.n-profile {
+  width: 40px;
+  display: inline-block;
+  float: left;
+}
+
+.n-text {
+  padding-left: 40px;
+  margin: -2px 0 0 0;
+}
+
+.n-text-side {
+  float: right;
+  display: inline-block;
+  width: 240px;
+  margin: -2px 0 0 0;
+}
+
+.notifications-btn {
+  padding: 6px 0 7px;
+  text-align: center;
+  font-size: 14px;
+  a {
+    color: #000;
+  }
+  &:hover {
+    background: none;
+  }
+}
+
+.notifications-delete {
+  border-top: 1px solid #e8e8e8;
+}
+
+.navbar {
+  .icon-notification {
+    top: -2px;
+  }
+  .nav-link-notification {
+    position: relative;
+  }
+  .notification-active:before {
+    content: '';
+    display: block;
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    z-index: 10;
+    background: #4078c0;
+    border-radius: 8px;
+    border: 3px solid #f6f5f8;
+  }
+}

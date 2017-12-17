@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_warning</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="12" cy="12" r="10"></circle>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="20" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="24-px-Icons" transform="translate(-170.000000, -362.000000)">
+            <g id="ic_warning" transform="translate(168.000000, 360.000000)">
+                <g>
+                    <use id="Oval" stroke="#000000" mask="url(#mask-2)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" xlink:href="#path-1"></use>
+                    <g id="Group" transform="translate(11.000000, 7.000000)" fill="#000000">
+                        <rect id="Rectangle" x="0" y="3" width="2" height="7" rx="1"></rect>
+                        <rect id="Rectangle-3" x="0" y="0" width="2" height="2" rx="1"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

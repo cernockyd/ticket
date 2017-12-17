@@ -1,0 +1,11 @@
+{
+    "name": "ticket",
+    "description": "ticket system",
+    "type": "project",
+    "minimum-stability": "dev",
+    "require": {
+        "tracy/tracy": "^2.4",
+        "nikic/fast-route": "^1.1",
+        "league/plates": "^3.3"
+    }
+}

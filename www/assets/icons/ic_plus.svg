@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_plus</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="24-px-Icons" transform="translate(-362.000000, -74.000000)" stroke="#000000">
+            <g id="ic_plus" transform="translate(360.000000, 72.000000)">
+                <g id="plus">
+                    <g transform="translate(3.000000, 3.000000)" stroke-width="2">
+                        <path d="M9,0 L9,18" id="Line"></path>
+                        <path d="M0,9 L18,9" id="Line"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

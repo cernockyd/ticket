@@ -1,0 +1,10 @@
+vendor
+composer.lock
+node_modules
+media
+app/config/config.php
+www/app.css
+www/app.js
+www/app.js.map
+www/app.css.map
+.idea

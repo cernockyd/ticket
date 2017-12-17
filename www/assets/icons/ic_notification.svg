@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="23px" viewBox="0 0 18 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_notification</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="24-px-Icons" transform="translate(-123.000000, -361.000000)" stroke="#000000">
+            <g id="ic_notification" transform="translate(120.000000, 360.000000)">
+                <g id="Group">
+                    <g transform="translate(4.000000, 2.000000)" stroke-width="2">
+                        <path d="M14,16 L14,8 C14,4.6862915 11.3137085,2 8,2 C4.6862915,2 2,4.6862915 2,8 L2,16 L0,19 L16,19 L14,16 Z" id="Combined-Shape"></path>
+                        <path d="M8,2 L8,0" id="Line"></path>
+                        <path d="M6,19 C6,20.1045695 6.8954305,21 8,21 L8,21 C9.1045695,21 10,20.1045695 10,19" id="Oval-2"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

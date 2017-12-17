@@ -1,0 +1,211 @@
+.window-overlay {
+  background-color: rgba(0,0,0,.35);
+  display: none;
+  height: 100%;
+  left: 0;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+}
+
+.window {
+  display: block;
+  border: 0;
+  border-radius: .375rem;
+  margin: 3rem auto;
+  padding: 20px 0 20px 20px;
+  position: relative;
+  width: 730px;
+  min-height: 340px;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+  z-index: 25;
+
+  .form-control {
+    resize: none;
+  }
+
+}
+
+.btn-close {
+  display: block;
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  width: 24px;
+  height: 24px;
+  opacity: .5;
+  background-repeat: no-repeat;
+  background-image: url('/assets/icons/ic_cancel.svg');
+  background-size: 14px;
+  background-position: center center;
+  z-index: 30;
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.window-labels {
+
+  .bootstrap-select {
+    width: 100%;
+  }
+
+  .btn-labels {
+    text-align: left;
+    display: block;
+    width: 100%;
+    padding: 2px 0 10px 4px;
+    background: #fff;
+    border: 0;
+  }
+}
+
+.window-main-col {
+  padding-right: 0
+}
+
+.window-title {
+  .form-control {
+    min-height: 29px;
+    color: #000;
+  }
+}
+
+.window-text {
+  .form-control {
+    border: 0;
+    padding: 1px 1px 1px 4px;
+    overflow: visible;
+    width: 512px;
+    font-size: 16px;
+    min-height: 26px;
+    line-height: 1.28;
+    height: auto;
+    &:focus {
+      background: #f6f5f8;
+      cursor: auto;
+    }
+  }
+}
+
+.window-description {
+  .form-control {
+    border-color: #d9d9d9;
+    margin-bottom: 8px;
+    word-wrap: break-word;
+    height: auto;
+    cursor: pointer;
+    &:focus {
+      border: 1px solid #d9d9d9;
+      padding: .2rem .4rem;
+    }
+  }
+  .focused {
+    background: #f6f5f8;
+    border: 1px solid #d9d9d9;
+    padding: .2rem .4rem;
+  }
+}
+
+.descriptionheight {
+  display: block;
+  font-size: 16px;
+  line-height: 1.28;
+  width: 512px;
+  word-wrap: break-word;
+  word-break: break-all;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.window-module {
+  margin-bottom: 2rem;
+
+  .window-module-headline {
+    margin: .8rem 0 .6rem;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+}
+
+.window-sidebar {
+  padding-top: 60px;
+
+  .btn-group {
+    width: 100%;
+    margin: 8px 0;
+    display: block;
+  }
+
+  .window-sidebar-heaadline {
+    margin: 8px 0 6px;;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+.window-module-newcoment {
+  padding-left: 40px;
+  position: relative;
+
+  .profile-picture {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 32px;
+  }
+
+  .form-control-newcomment {
+    margin-bottom: 8px;
+  }
+}
+
+.btn-exit {
+  width: 24px;
+  height: 24px;
+  opacity: .5;
+  background-repeat: no-repeat;
+  background-image: url('/assets/icons/ic_cancel.svg');
+  background-size: 14px;
+  background-position: center center;
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.btn-window-settings {
+  position: relative;
+}
+
+.dropdown-window  {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    min-width: 10rem;
+    padding: .5rem 1rem;
+    margin: .125rem 0 0;
+    font-size: 1rem;
+    color: #292b2c;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .375rem;
+}
+
+.dropdown-window-state {
+  width: 300px;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
+}
+
+.custom-control-input.checkbox-delete:checked~.custom-control-indicator {
+  background-color: #e60000;
+}

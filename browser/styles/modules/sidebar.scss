@@ -1,0 +1,71 @@
+.sidebar-widget {
+  margin-bottom: 2rem;
+
+  .widget-headline {
+    color: #9E9E9F;
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .widget-navigation {
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: block;
+      line-height: 28px;
+      margin-bottom: 8px;
+
+      a {
+        color: #464646;
+        &:focus {
+          text-decoration: none;
+        }
+      }
+      .active {
+        font-weight: 600;
+        color: #000;
+      }
+    }
+
+  }
+}
+
+.card-icon {
+  display: inline-block;
+  height: 28px;
+  width: 28px;
+  margin-right: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 28px;
+  border-radius: .375rem;
+}
+.icon-state-1 {
+  background: #a0a6a9;
+}
+.card-icon,
+.card-icon.icon-state-1 {
+  background: #C0C0C0;
+}
+.icon-state-0 {
+  background: #FFA116;
+}
+.icon-orange {
+  background: #f47932;
+}
+.icon-red {
+  background: #ED3824;
+}
+.icon-state-2,
+.icon-blue {
+  background: #47b4ec;
+}
+.icon-state-3,
+.icon-green {
+  background: #61BD4F;
+}

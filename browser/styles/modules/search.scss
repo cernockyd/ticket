@@ -1,0 +1,21 @@
+.form-search {
+
+}
+
+.form-control-search {
+  display: block;
+  width: 100%;
+  padding: 12px 15px 12px 15px;
+  margin-bottom: 6px;
+  min-height: 52px;
+  background: #fff;
+  border: 0;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+  border-radius: .375rem;
+  &:focus {
+    outline: none;
+    -webkit-box-shadow: 0 2px 6px 1px rgba(0,0,0,.20);
+    box-shadow: 0 2px 6px 1px rgba(0,0,0,.20);
+  }
+}
