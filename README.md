@@ -4,6 +4,9 @@
 
 > Jednoduchá služba pro nahlašování závad a požadavků pro správce školní sítě.
 
+![Screenshot](https://cdn-images-1.medium.com/max/2000/0*9Bk7hSaFni6FDGei.)
+
+
 ## Předpoklady projektu
 
 - [MariaDB](http://mariadb.org/) nebo [MySQL](http://www.mysql.com/)
