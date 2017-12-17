@@ -1,4 +1,6 @@
-#NStack - ticket systém
+# Ticket
+
+> Legacy code warning!
 
 > Jednoduchá služba pro nahlašování závad a požadavků pro správce školní sítě.
 
