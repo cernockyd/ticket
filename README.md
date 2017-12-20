@@ -2,12 +2,12 @@
 
 > Legacy code warning!
 
-> Jednoduchá služba pro nahlašování závad a požadavků pro správce školní sítě.
+> Simple service for reporting bugs and sharing requirements between school network/tech administrators and school network users.
 
 ![Screenshot](https://cdn-images-1.medium.com/max/2000/0*9Bk7hSaFni6FDGei.)
 
 
-## Předpoklady projektu
+## Prerequisites
 
 - [MariaDB](http://mariadb.org/) nebo [MySQL](http://www.mysql.com/)
 - [PHP](http://php.net/downloads.php) 7+
@@ -15,92 +15,91 @@
 - [node.js](http://nodejs.org) Node 6+
 - [npm](http://docs.npmjs.com/getting-started/installing-node)
 
-## Techniky
+## Used technics
 
-- server side rendering s routingem a jednoduchým MVC frameworkem
-- asynchronní zpracování formulářů a jejich výsledků
-- minifikace a zpracování javascriptu a css pomocí [Webpacku](https://webpack.github.io/docs/)
-- moderní javascript s podporou starších prohlížečů [(Babel)](https://babeljs.io/)
-- moderní css s proměnnýma, funkcema a dědičností [(Sass)](http://sass-lang.com/)
+- server side rendering with routing and simple MVC framework
+- asynchronous forms processing (very badly implemented)
+- javascript and css minification using [Webpack](https://webpack.github.io/docs/)
+- modern javascript with support for older browsers [(Babel)](https://babeljs.io/)
+- modern css with variables, functions etc. [(Sass)](http://sass-lang.com/)
 
-## Knihovny
+## Libraries
 
-- [jQuery](https://jquery.com/) - práce s DOMem
-- [bootstrap 4](https://getbootstrap.com/) - moderní css komponenty
+- [jQuery](https://jquery.com/) - manipulating with DOM
+- [bootstrap 4](https://getbootstrap.com/) - modern css components
 - [bootstrap select](https://github.com/silviomoreto/bootstrap-select)
 - [moment](https://github.com/moment/moment)
 - [select2](https://select2.github.io/)
-- [autosize](https://github.com/jackmoore/autosize) - automatické zvětšování textového pole
+- [autosize](https://github.com/jackmoore/autosize) - atomatic textarea resizing
 - [FastRoute](https://github.com/nikic/FastRoute)
 - [tracy](https://github.com/nette/tracy) - debugging tool
-- [plates](http://platesphp.com/) - renderování šablon
+- [plates](http://platesphp.com/) - php templates rendering
 
-## Struktura aplikace
+## Application structure
 
 ```
 .
-├── app                 - jádro serverové části aplikace
+├── app                 -  serverside kernel
 │   ├── config
-│   │   └── config.php  - pole s konfigurací aplikace (přístupové údaje atd.)
+│   │   └── config.php  - array with app configuration (login info etc.)
 │   │
-│   ├── init.php        - autoloading tříd podle namespaces
-│   ├── lib …           - třídy pro nižší procesy (validace, databáze …)
-│   ├── models …        - třídy pro práci s daty (uživatelé, karty …)
-│   └── presenters …    - presentery zpracují modely a vykreslí šablony, případně
-│       │                 vrátí denormalizovaná data pro zpracování v prohlížeči
-│       └── templates … - šablony, které budou prezentovány uživateli
+│   ├── init.php        - class autoloading according to its namespaces
+│   ├── lib …           - classes for basic processes (validation, simple ORM …)
+│   ├── models …        - classes for working with models (users, cards …)
+│   └── presenters …    - presenters (return rendered templates or denormalized data
+│       │                 like api)
+│       └── templates … - templates
 │
-├── browser             - moduly klientské části
-│   ├── styles          - zdrojové soubory kaskádových stylů
-│   └── Main.js         - hlavní soubor klientské části (js + scss)
+├── browser             - frontend part
+│   ├── styles          - scss files
+│   └── Main.js         - main frontend file (js + scss)
 │
 ├── www
-│   ├── app.css         - css podoba v prohlížeči (všechny minifikované moduly)
-│   ├── app.js          - funkcionalita v prohlížeči (všechny minifikované moduly)
-│   ├── assets          - obrázky a ikony
+│   ├── app.css         - minified css
+│   ├── app.js          - minified js
+│   ├── assets          - images and icons
 │   │   ├── favicons …
 │   │   ├── icons …
 │   │   └── img …
-│   └── index.php       - vstupní soubor, načte základní soubory z jádra serverové
-│                         části a podle povahy požadavku rozhodne o tom, jaký presenter
-│                         a metoda budou použity pro odpověď na požadavek.
+│   └── index.php       - web app starting point - calls presenter methods according
+│                         to requested routes
 │
-├── .babelrc            - konfigurační soubor babelu
-├── .gitignore          - konfigurační soubor verzovacího systému
-├── .htaccess           - konfigurační webového serveru
-├── composer.json       - konfigurační soubor composeru (správce php závislostí)
-├── package.json        - konfigurační soubor npm (správce js závislostí)
-├── README.md           - důležité informace o projektu
-└── webpack.config.js   - konfigurační soubor webpacku (module bundler)
+├── .babelrc            - babel config
+├── .gitignore          - git config (files to not to track)
+├── .htaccess           - web server config
+├── composer.json       - composer config (contains list of php dependencies)
+├── package.json        - npm config (contains list of js dependencies)
+├── README.md
+└── webpack.config.js   - webpack config (frontend module bundler)
 ```
 
-## Instalace a spuštění aplikace
+## Installation
 
-1. Je potřeba nainstalovat php a javascriptové knihovny, na kterých je aplikace závislá.
-Zadejte nad složkou projektu následující příkazy:
+1. First of all You need to install php and javascript dependencies.
+Run following commands in the project folder:
 
-  - `composer install` nainstaluje php závislosti
-  - `npm install` nainstaluje js závislosti
-
-
-2. V projektu přibyly složky `vendor` a `node_modules`
-
-3. Nakonfigurujte php aplikaci
-v souboru `app/config/config.php`
-
-4. Do zvolené databáze importujte tabulky z `database.sql`
-
-## Příkazy pro vývoj na straně klienta:
-
-Pro okamžitý vývoj klientské části ve složce `browser` (javascript + css)
-použijte následující příkazy:
-
-- `npm start` automatické zpracování s reagováním na změny v souborech
-- `npm run webpack` jednorázové zpracování javascriptu a scss
+  - `composer install` downloads and installs php dependencies
+  - `npm install` installs javascript dependencies
 
 
-## Vývoj strany serveru
+2. New folders have been added to the project: `vendor` and `node_modules`
 
-Pro vývoj serverové části ve složkách `www` a `app` si prosím pozorně přečtěte dokumentaci.
+3. Configure php application
+in file `app/config/config.php`
 
-Vstupním soubor webové aplikace je `www/index.php`
+4. Import/create database from `database.sql`
+
+## Commands for frontend development
+
+For instant development for frontend (javascript + css) open `browser` folder
+and run these commands:
+
+- `npm start` automatically processes javascript and scss and watches files for changes
+- `npm run webpack` one-time process of javascript and scss
+
+
+## Serverside development
+
+For the development of the server parts in `www` and` app` folders, please read the [docs](https://medium.com/@cernockyd/dokumentace-maturitn%C3%AD-pr%C3%A1ce-ticket-system-822cc08aa029) carefully.
+
+The web application starting file is `www/index.php`
