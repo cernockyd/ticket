@@ -1,5 +1,4 @@
 vendor
-composer.lock
 node_modules
 media
 app/config/config.php
