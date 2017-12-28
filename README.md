@@ -35,43 +35,6 @@
 - [tracy](https://github.com/nette/tracy) - debugging tool
 - [plates](http://platesphp.com/) - php templates rendering
 
-## Application structure
-
-```
-.
-├── app                 -  serverside kernel
-│   ├── config
-│   │   └── config.php  - array with app configuration (login info etc.)
-│   │
-│   ├── init.php        - class autoloading according to its namespaces
-│   ├── lib …           - classes for basic processes (validation, simple ORM …)
-│   ├── models …        - classes for working with models (users, cards …)
-│   └── presenters …    - presenters (return rendered templates or denormalized data
-│       │                 like api)
-│       └── templates … - templates
-│
-├── browser             - frontend part
-│   ├── styles          - scss files
-│   └── Main.js         - main frontend file (js + scss)
-│
-├── www
-│   ├── app.css         - minified css
-│   ├── app.js          - minified js
-│   ├── assets          - images and icons
-│   │   ├── favicons …
-│   │   ├── icons …
-│   │   └── img …
-│   └── index.php       - web app starting point - calls presenter methods according
-│                         to requested routes
-│
-├── .babelrc            - babel config
-├── .gitignore          - git config (files to not to track)
-├── .htaccess           - web server config
-├── composer.json       - composer config (contains list of php dependencies)
-├── package.json        - npm config (contains list of js dependencies)
-├── README.md
-└── webpack.config.js   - webpack config (frontend module bundler)
-```
 
 ## Installation
 
