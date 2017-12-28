@@ -52,7 +52,7 @@ class CardsPresenter
     if (!empty($card_id)) {
       $admins = $this->_db->get('users', ['group_id', '=', 2]);
       if (!empty($admins) && $admins->count()) {
-          $t = new Template(__DIR__ . '/templates', 'tpl');
+          $t = new Template(__DIR__ . '/templates');
           $t->addData([
             'subject'=> $subject,
             'description'=>$description,
@@ -73,7 +73,7 @@ class CardsPresenter
 
   public function test() {
     $mess = 'zprava';
-    $t = new Template(__DIR__ . '/templates', 'tpl');
+    $t = new Template(__DIR__ . '/templates');
     $t->addData([
       'subject'=>'Něco nefunguje',
       'description'=> 'furt',
@@ -144,7 +144,7 @@ class CardsPresenter
       exit();
     }
     Session::delete('AddCard/Media');
-    $t = new Template(__DIR__ . '/templates', 'tpl');
+    $t = new Template(__DIR__ . '/templates');
     $t->addData(['slug'=>'/newitem','user'=>$this->_user,'csrf_token'=>Token::generate()]);
     echo $t->render('partials/Header', ['title'=>'Vystavit předmět']);
     echo $t->render('AddCard');
@@ -157,7 +157,7 @@ class CardsPresenter
       exit();
     }
     Session::delete('AddCard/Media');
-    $t = new Template(__DIR__ . '/templates', 'tpl');
+    $t = new Template(__DIR__ . '/templates');
     $t->addData(['slug'=>'/newitem','user'=>$this->_user,'csrf_token'=>Token::generate()]);
     echo $t->render('partials/Header', ['title'=>'Děkujeme']);
     echo $t->render('Thanks');

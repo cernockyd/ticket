@@ -30,7 +30,7 @@ class HomepagePresenter
     } else {
       $template = 'Homepage';
     }
-    $t = new Template(__DIR__ . '/templates', 'tpl');
+    $t = new Template(__DIR__ . '/templates');
     $t->addData([
       'slug'=> ($this->_user->isComplete()) ? '/d' : '/',
       'title'=> 'Přehled závad',

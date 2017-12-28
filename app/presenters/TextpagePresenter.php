@@ -15,7 +15,7 @@ class TextpagePresenter
   }
 
   public function render_404($template = '404') {
-    $t = new Template(__DIR__ . '/templates', 'tpl');
+    $t = new Template(__DIR__ . '/templates');
     $t->addData(['slug'=>'/404','title'=>'Stránka nenalezena','user'=>$this->_user,'csrf_token'=>Token::generate()]);
     echo $t->render('partials/Header');
     echo $t->render('other/'.$template);
@@ -23,7 +23,7 @@ class TextpagePresenter
   }
 
   public function render_about($template = 'About') {
-    $t = new Template(__DIR__ . '/templates', 'tpl');
+    $t = new Template(__DIR__ . '/templates');
     $t->addData(['slug'=>'/about','title'=>'O službě','user'=>$this->_user,'csrf_token'=>Token::generate()]);
     echo $t->render('partials/Header');
     echo $t->render($template);
@@ -31,7 +31,7 @@ class TextpagePresenter
   }
 
   public function render_faq($template = 'Faq') {
-    $t = new Template(__DIR__ . '/templates', 'tpl');
+    $t = new Template(__DIR__ . '/templates');
     $t->addData(['slug'=>'/jak-to-funguje','title'=>'Jak to funguje','user'=>$this->_user,'csrf_token'=>Token::generate()]);
     echo $t->render('partials/Header');
     echo $t->render($template);

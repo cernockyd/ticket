@@ -89,7 +89,7 @@ class ApiPresenter
         if ($card_owner->exists() && $type == 'comment' OR $card_owner->exists()) {
           if ($force_email OR $card_owner->authorizeNotification('notif-comments') && $card_owner->authorizeNotification('notif-allow')) {
 
-            $t = new Template(__DIR__ . '/templates', 'tpl');
+            $t = new Template(__DIR__ . '/templates');
             $t->addData([
               'subject'=>$card->data()->name,
               'description'=>$card->data()->description,
@@ -130,7 +130,7 @@ class ApiPresenter
               break;
           }
           if ($card_owner->authorizeNotification('notif-allow') && $card_owner->authorizeNotification($notif_setting)) {
-            $t = new Template(__DIR__ . '/templates', 'tpl');
+            $t = new Template(__DIR__ . '/templates');
             $t->addData([
               'subject'=>$card->data()->name,
               'description'=>$card->data()->description,

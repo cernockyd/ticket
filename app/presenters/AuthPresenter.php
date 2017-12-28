@@ -119,7 +119,7 @@ class AuthPresenter
   }
 
   public function renderLoginPage() {
-    $t = new Template(__DIR__ . '/templates', 'tpl');
+    $t = new Template(__DIR__ . '/templates');
     $t->addData([
       'slug'=>'/login',
       'title'=>'Přihlášení',
