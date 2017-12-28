@@ -9,7 +9,7 @@
 
 ## Prerequisites
 
-- [MariaDB](http://mariadb.org/) nebo [MySQL](http://www.mysql.com/)
+- [MariaDB](http://mariadb.org/) or [MySQL](http://www.mysql.com/)
 - [PHP](http://php.net/downloads.php) 7+
 - [composer](http://getcomposer.org/)
 - [node.js](http://nodejs.org) Node 6+
