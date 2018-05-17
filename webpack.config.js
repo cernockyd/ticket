@@ -63,7 +63,7 @@ module.exports = {
       minimize: true,
       sourceMap: true,
       compress: {
-        drop_console: true
+        drop_console: false
       },
       mangle: {
         except: ['$super', '$', 'exports', 'require', '$q', '$ocLazyLoad']
